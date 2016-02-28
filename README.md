@@ -11,6 +11,6 @@ Remove duplicate without buffer take o(n2)
 
  Self-Made Linked List: Node has data and next two fileds.
  
- get kth last elements in LinkedList without knowing list size:
+ Get K-th last elements in LinkedList without knowing list size:
  
   p1 and p2 at head of list, move p1 to k, and move p1 and p2 simutianously 
