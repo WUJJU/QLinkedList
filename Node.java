@@ -42,25 +42,26 @@ public class Node{
 
 
   }
+//n.next 并未取得任何赋值
 
- public void addTail(int d){
-    Node end=new Node(d);
-    Node n=this;
-     while(n!=null){
-      n=n.next;
+ // public void addTail(int d){
+ //    Node end=new Node(d);
+ //    Node n=this;
+ //     while(n!=null){
+ //      n=n.next;
+ //     }
+ //     n=end;
+ // }
+
+
+  public void addTail(int d){
+  	Node end=new Node(d);
+  	Node n=this;
+     while(n.next!=null){
+     	n=n.next;
      }
-     n=end;
- }
-
-
-  // public void addTail(int d){
-  // 	Node end=new Node(d);
-  // 	Node n=this;
-  //    while(n.next!=null){
-  //    	n=n.next;
-  //    }
-  //    n.next=end;
-  // }
+     n.next=end;
+  }
   
   public  void printall(){
    Node t=this;
