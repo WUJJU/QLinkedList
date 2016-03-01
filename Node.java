@@ -4,7 +4,7 @@ public class Node{
 
   Node next=null;
   int data;
-
+  int size=1;
   public Node(int d){
    data =d;
 
@@ -39,7 +39,7 @@ public class Node{
    
    pren.next=n.next;
    n.next=null;
-
+   size=size-1;
 
   }
 //n.next 并未取得任何赋值
@@ -61,6 +61,15 @@ public class Node{
      	n=n.next;
      }
      n.next=end;
+     size=size+1;
+  }
+  public void addTail(Node d){
+
+      Node n=this;
+     while(n.next!=null){
+      n=n.next;
+     }
+     n.next=d;
   }
   
   public  void printall(){
@@ -117,8 +126,15 @@ public class Node{
      }
    
        sumn.printall();
+ print();
+
+   
+
   }
 
+ public static void print(){
+  System.out.println("----------->");
 
+ }
 
 }
