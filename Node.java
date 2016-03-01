@@ -3,9 +3,9 @@ import java.util.*;
 public class Node{
 
   Node next=null;
-  int data;
+  Object data;
   int size=1;
-  public Node(int d){
+  public Node(Object d){
    data =d;
 
   }
@@ -26,7 +26,7 @@ public class Node{
     else{
 
      for(int i=1;i<=t;i++){
-      n=this.next;
+      n=n.next;
      }
      return n;
     }
@@ -54,7 +54,7 @@ public class Node{
  // }
 
 
-  public void addTail(int d){
+  public void addTail(Object d){
   	Node end=new Node(d);
   	Node n=this;
      while(n.next!=null){
@@ -70,6 +70,7 @@ public class Node{
       n=n.next;
      }
      n.next=d;
+     size=size+1;
   }
   
   public  void printall(){
